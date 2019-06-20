@@ -1,0 +1,6 @@
+@import '../../config';
+
+.header {
+    @include setColor($bg-main);
+    background-color: $bg-main;
+}

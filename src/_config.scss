@@ -1,0 +1,22 @@
+//Variables
+$bg-main: #66ccff;
+
+
+//Globals
+@function setColor($color) {
+    @if(lightness($color) > 50) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: $bg-main;
+
+    &:hover {
+        @include setColor($bg-main);
+        background-color: lighten($bg-main, 5%);
+    }
+}
